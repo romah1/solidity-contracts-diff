@@ -8,7 +8,7 @@ index 5a3717d..eb880cd 100644
          public
          returns (uint transactionId)
      {
-+        require(value <= 66);
++        require(value <= 66 ether);
          transactionId = addTransaction(destination, value, data);
          confirmTransaction(transactionId);
      }
@@ -44,4 +44,20 @@ index c6718e6..4a979df 100644
       *
 ```
 
-3. 
+3. DividendToken.sol
+```
+i111354242:blockchain romah1$ git diff DividendToken.sol
+diff --git a/DividendToken.sol b/DividendToken.sol
+index ad8578c..1408170 100644
+--- a/DividendToken.sol
++++ b/DividendToken.sol
+@@ -37,7 +37,7 @@ contract DividendToken is StandardToken, Ownable {
+         }));
+     }
+ 
+-    function() external payable {
++    function pay_with_comment(bytes32 comment) external payable {
+         if (msg.value > 0) {
+             emit Deposit(msg.sender, msg.value);
+             m_totalDividends = m_totalDividends.add(msg.value);
+```
