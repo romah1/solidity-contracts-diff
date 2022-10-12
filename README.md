@@ -44,7 +44,7 @@ index c6718e6..4a979df 100644
       *
 ```
 
-3. DividendToken.sol
+3. DividendToken.sol diff:
 ```
 i111354242:blockchain romah1$ git diff DividendToken.sol
 diff --git a/DividendToken.sol b/DividendToken.sol
